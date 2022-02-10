@@ -1,10 +1,10 @@
 <template>
   <div id="app">
+    <router-view></router-view>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
     <footer>
       <nav class="footersocialmedia">
         <div>
@@ -34,9 +34,7 @@
 .footersocialmedia {
   display: flex;
   justify-content: space-around;
-  div {
-    margin-top: 50px;
-  }
+  // align-items: center;
   div:first-of-type {
     display: flex;
     flex-direction: column;
