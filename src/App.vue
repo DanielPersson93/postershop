@@ -34,11 +34,13 @@ body {
       justify-content: space-between;
       flex-direction: column;
     }
+
     h1 {
       margin-top: 13rem;
       font-size: 102px;
       align-self: center;
     }
+
     img {
       width: 20%;
       align-self: center;
