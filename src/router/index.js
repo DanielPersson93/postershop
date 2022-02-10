@@ -15,7 +15,6 @@ const routes = [
     path: "/poster/:id",
     name: "Poster",
     component: Poster,
-    props: true,
   },
 ];
 

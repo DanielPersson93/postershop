@@ -2,6 +2,7 @@
   <div id="app">
     <header>
       <div class="header__block">
+        <img src="@/assets/navicon.svg" width="28px" height="28px" class="navicon">
         <h1 class="header__poster-shop">Poster Shop</h1>
         <img class="header__ninja-img" src="./assets/ninjahead.svg" alt="" />
       </div>
@@ -87,13 +88,19 @@ header {
     flex-direction: column;
   }
   h1 {
-    margin-top: 13rem;
+    margin-top: 9rem;
     font-size: 102px;
     align-self: center;
   }
-  img {
+  .navicon{
+    align-self: flex-start;
+    margin: 2rem 0 0 2rem;
+    cursor:pointer;
+  }
+  .header__ninja-img {
     width: 20%;
     align-self: center;
   }
+
 }
 </style>

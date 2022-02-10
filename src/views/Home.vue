@@ -1,24 +1,26 @@
 <template>
   <div class="home">
-     <select v-model="sortType" v-on:change="sortItem()">
-        <option value="" disabled hidden>Sort Type</option>
-        <option value="Price lo->hi">Price lowest to highest</option>
-        <option value="Price hi->lo">Price highest to lowest</option>
-        <option value="rating hi->lo">Rating highest to lowest</option>
-        <option value="rating lo->hi">Rating lowest to highest</option>
-    </select>
     <div class="grid">
+     <div class="filter">
+       <select v-model="sortType"  v-on:change="sortItem()">
+          <option  value="" disabled hidden>Sort</option>
+          <option value="Price lo->hi">Price lowest to highest</option>
+          <option value="Price hi->lo">Price highest to lowest</option>
+          <option value="rating hi->lo">Rating highest to lowest</option>
+          <option value="rating lo->hi">Rating lowest to highest</option>
+           </select>
+     </div>
       <article
         class="card"
         v-for="poster in this.$store.state.posters"
         :key="poster.id"
       >
-        <router-link :to="{ name: 'Poster', params: { poster: poster } }">
+        <router-link :to="'/poster/' + poster.id" >
           <img :src="require(`../assets/${poster.picture}`)" alt="" />
           <h1>{{ poster.title }}</h1>
-        </router-link>
         <p>{{ poster.description }}</p>
         <button>Oh, take my money!</button>
+        </router-link>
       </article>
     </div>
   </div>
@@ -65,6 +67,16 @@ export default {
   img{
     width: 310px;
   }
+
+  .filter{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+      
+  }
+
+
 
   .grid{
     display: flex;

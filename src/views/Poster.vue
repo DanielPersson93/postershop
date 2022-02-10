@@ -13,13 +13,18 @@
 </template>
 <script>
 export default {
-  props: ["poster"],
+  computed: {
+    poster(){
+      return this.$store.state.posters.find(fis => fis.id == this.$route.params.id)
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
 .about {
   color: white;
   display: flex;
+  margin-top: 2rem;
   img {
     width: 500px;
   }
