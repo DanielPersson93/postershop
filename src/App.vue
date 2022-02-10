@@ -31,10 +31,19 @@
 </template>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+  #app {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: black;
+    width: 1440px;
+  }
+
 .footersocialmedia {
   display: flex;
   justify-content: space-around;
-  // align-items: center;
+    color: white;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.2);
   div:first-of-type {
     display: flex;
     flex-direction: column;
@@ -51,15 +60,6 @@
     color: white;
     text-decoration: none;
   }
-  color: white;
-  height: 320px;
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
-#app {
-  font-family: 'Fira Sans', sans-serif;
-  background-color: black;
-  width: 1440px;
-}
 </style>
