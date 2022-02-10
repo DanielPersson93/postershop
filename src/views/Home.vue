@@ -1,15 +1,18 @@
 <template>
   <div class="home">
     <div class="grid">
-      <article class="card" v-for="poster in this.$store.state.posters" :key="poster.id">
-        <router-link :to="'/poster/' + poster.id">
-        <img :src="require(`../assets/${poster.picture}`)" alt="">
-        <h1>{{poster.title}}</h1>
-       </router-link>
-       <p>{{poster.description}}</p>
-       <button>Oh, take my money!</button>
+      <article
+        class="card"
+        v-for="poster in this.$store.state.posters"
+        :key="poster.id"
+      >
+        <router-link :to="{ name: 'Poster', params: { poster: poster } }">
+          <img :src="require(`../assets/${poster.picture}`)" alt="" />
+          <h1>{{ poster.title }}</h1>
+        </router-link>
+        <p>{{ poster.description }}</p>
+        <button>Oh, take my money!</button>
       </article>
-      
     </div>
   </div>
 </template>
