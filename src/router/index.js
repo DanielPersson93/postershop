@@ -1,27 +1,28 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Poster from '../views/Poster.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import Poster from "../views/Poster.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/poster/:id',
-    name: 'Poster',
-    component: Poster
-  }
-]
+    path: "/poster/:id",
+    name: "Poster",
+    component: Poster,
+    props: true,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
