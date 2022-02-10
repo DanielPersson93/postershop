@@ -5,28 +5,24 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <footer>
+      <nav class="footersocialmedia">
+        <img src="./assets/logo-facebook.svg" alt="">
+        <img src="./assets/logo-instagram.svg" alt="">
+        <img src="./assets/logo-linkedin.svg" alt="">
+        <img src="./assets/logo-twitter.svg" alt="">
+      </nav>
+    </footer>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.footersocialmedia {
+  background-color: black
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+#app {
+  font-family: 'Fira Sans', sans-serif;
 }
 </style>
