@@ -1,5 +1,12 @@
 <template>
   <div class="home">
+     <select v-model="sortType" v-on:change="sortItem()">
+        <option value="" disabled hidden>Sort Type</option>
+        <option value="Price lo->hi">Price lowest to highest</option>
+        <option value="Price hi->lo">Price highest to lowest</option>
+        <option value="rating hi->lo">Rating highest to lowest</option>
+        <option value="rating lo->hi">Rating lowest to highest</option>
+    </select>
     <div class="grid">
       <article
         class="card"
@@ -18,7 +25,27 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){return{
+    sortType: ""
+  }},
+  methods: {
+            sortItem() {
+                if (this.sortType == 'Price lo->hi') {
+                    this.$store.state.posters = this.$store.state.posters.sort((prev, curr) => prev.price - curr.price);
+                }
+                if (this.sortType == 'Price hi->lo') {
+                    this.$store.state.posters = this.$store.state.posters.sort((prev, curr) => prev.price - curr.price).reverse();
+                }
+                if (this.sortType == 'rating hi->lo') {
+                    this.$store.state.posters = this.$store.state.posters.sort((prev, curr) => prev.rating - curr.rating).reverse();
+                }
+                if (this.sortType == 'rating lo->hi') {
+                    this.$store.state.posters = this.$store.state.posters.sort((prev, curr) => prev.rating - curr.rating);
+                }
+            }
+        }
+};
 </script>
 
 <style lang="scss" scoped>
