@@ -22,40 +22,78 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.home {
-  background: black;
-  padding: 0 221px 126px;
-}
-img {
-  width: 310px;
-}
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
+  h1{
+    margin: 16px 0 16px
+  }
 
-article {
-  display: flex;
-  flex-direction: column;
-  width: 310px;
-  margin-top: 96px;
-}
+  p{
+    margin: 0 0 40px;
+  }
 
-a,
-p {
-  text-decoration: none;
-  color: white;
-}
+  .home{
+    background: black;
+    padding: 0 200px 126px
+  }
+  img{
+    width: 310px;
+  }
 
-button {
-  all: unset;
-  background: #e83f57;
-  padding: 0.8rem;
-  width: 50%;
-  color: white;
-  border-radius: 2px;
-  font-weight: bold;
-  cursor: pointer;
-}
+  .grid{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    // grid-template-columns: repeat(3,1fr);
+  }
+
+  article{
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    margin: 96px 16px 0 16px;
+  }
+  article:nth-of-type(11), article:nth-of-type(10){
+    background: white;
+    width: 483px;
+    height: 770px;
+    
+      img{
+        width: 483px;
+      }
+      h1{
+        color: black;
+        font-size: 34px;
+        font-weight: bold;
+        margin: 32px 0 16px 16px;
+      }
+      p{
+        font-size: 16px;
+        color: black;
+        margin: 0 0 68px 16px;
+      }
+      button{
+        width: 173px;
+        margin-left: 16px;
+        padding:1.5rem;
+      }
+  }
+
+  a, p{
+    text-decoration: none;
+    color: white;
+  }
+
+  button{
+    all: unset;
+    background: #E83F57;
+    padding: .8rem;
+    width: 50%;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+  }
+
+
 </style>
