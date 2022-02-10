@@ -2,14 +2,21 @@
   <div id="app">
     <header>
       <div class="header__block">
-        <img src="@/assets/navicon.svg" width="28px" height="28px" class="navicon">
+        <router-link to="/">
+          <img
+            src="@/assets/navicon.svg"
+            width="28px"
+            height="28px"
+            class="navicon"
+          />
+        </router-link>
         <h1 class="header__poster-shop">Poster Shop</h1>
         <img class="header__ninja-img" src="./assets/ninjahead.svg" alt="" />
       </div>
     </header>
-      <main>
-    <router-view></router-view>
-      </main>
+    <main>
+      <router-view></router-view>
+    </main>
     <footer>
       <nav class="footersocialmedia">
         <div>
@@ -25,10 +32,15 @@
         </div>
         <div>
           <h1>Social media</h1>
-          <img src="./assets/logo-facebook.svg" alt="" width="32" height="32">
-          <img src="./assets/logo-instagram.svg" alt="" width="32" height="32">
-          <img src="./assets/logo-linkedin.svg" alt="" width="32" height="32">
-          <img src="./assets/logo-twitter.svg" alt="" width="32" height="32">
+          <img src="./assets/logo-facebook.svg" alt="" width="32" height="32" />
+          <img
+            src="./assets/logo-instagram.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+          <img src="./assets/logo-linkedin.svg" alt="" width="32" height="32" />
+          <img src="./assets/logo-twitter.svg" alt="" width="32" height="32" />
         </div>
       </nav>
     </footer>
@@ -36,7 +48,7 @@
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ropa+Sans:ital@0;1&display=swap");
 html,
 body {
@@ -48,7 +60,7 @@ body {
   }
 }
 #app {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   background-color: black;
   width: 1440px;
 }
@@ -92,15 +104,14 @@ header {
     font-size: 102px;
     align-self: center;
   }
-  .navicon{
+  .navicon {
     align-self: flex-start;
     margin: 2rem 0 0 2rem;
-    cursor:pointer;
+    cursor: pointer;
   }
   .header__ninja-img {
     width: 20%;
     align-self: center;
   }
-
 }
 </style>
